@@ -16,7 +16,7 @@ export const typeDefs = gql`
 
     type Query {
         notes: [Note]
-        reminders :[Reminder]
+        reminders: [Reminder]
     }
 
     type Mutation {

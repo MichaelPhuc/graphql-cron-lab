@@ -1,11 +1,12 @@
 {
-  "name": "cron",
+  "name": "acit3695api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "dependencies": {
     "apollo-server": "^2.19.0",
+    "cron": "^1.8.2",
     "graphql": "^15.4.0",
     "moment": "^2.29.1",
     "mongoose": "^5.10.13",
