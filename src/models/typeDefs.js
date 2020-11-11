@@ -9,9 +9,11 @@ export const typeDefs = gql`
     }
 
     type Reminder {
-        name: String!
-        date: String!
-        time: String!
+        text: String!
+        remind: String!
+        completed: Boolean!
+        completed_at: String!
+        dateCreated: String!
     }
 
     type Query {
@@ -20,8 +22,8 @@ export const typeDefs = gql`
     }
 
     type Mutation {
-        addNote(title: String!, content: String!, dateCreated: String!): Note!
-        addReminder(name: String!, date: String!, time: String!): Reminder!
+        addNote(title: String!, content: String!, dateCreated: Int!): Note!
+        addReminder(text: String!, remind: String!, completed: Boolean!, completed_at: String!, dateCreated: String!): Reminder!
     }
     
 `
