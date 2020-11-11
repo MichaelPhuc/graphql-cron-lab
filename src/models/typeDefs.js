@@ -21,6 +21,7 @@ export const typeDefs = gql`
 
     type Mutation {
         addNote(title: String!, content: String!, dateCreated: String!): Note!
+        addReminder(name: String!, date: String!, time: String!): Reminder!
     }
     
 `
