@@ -1,23 +1,15 @@
 import { Note } from './Notes.js'
-import { Reminder } from './Reminders.js'
 
 export const resolvers = {
     Query: {
-        notes: () => Note.find(),
-        reminders: () => Reminder.find()
+        upcomingnotes: () => Note.find()   
     },
 
     Mutation: {
-        addNote: async ( _, {title, content, dateCreated } ) => {
-            const note = new Note({title, content, dateCreated })
+        addNote: async ( _, {title, content, dateCreated, reminder } ) => {
+            const note = new Note({title, content, dateCreated, reminder })
             await note.save()
             return note
-        },
-        addReminder: async ( _, { name, date, time } ) => {
-            const reminder = new Reminder({ name, date, time })
-            await reminder.save()
-            return Reminder
-        },
-    
+        }
     }
 }

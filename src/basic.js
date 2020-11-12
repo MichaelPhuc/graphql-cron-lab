@@ -6,7 +6,9 @@ const fakeData = [
     { name: "mile", date: "2020-12-05", time: "10:00" }
 ]
 
-cron.schedule('*/5 * * * * *', () => {
+
+
+cron.schedule('0 * * * *', () => {
     let time = moment()
     const result = fakeData.filter( calEvent => calEvent.date == time.format("YYYY-MM-DD") )
     if ( result.length != 0 ) {

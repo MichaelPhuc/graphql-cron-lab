@@ -7,11 +7,12 @@ const { ApolloServer } = apolloServer
 
 const start = async () => {
 
-    await mongoose.connect("mongodb+srv://dbUser:P@ssw0rd@graphql-api.1a5w5.mongodb.net/graphqlNotes?retryWrites=true&w=majority", {
+    await mongoose.connect("mongodb+srv://dbUser:P@ssw0rd@graphql-api.1a5w5.mongodb.net/Upcoming?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
 
+    
     const server = new ApolloServer({typeDefs, resolvers})
     server.listen({port: 4000}).then(({url}) => console.log(`server running at ${url}`))
 
